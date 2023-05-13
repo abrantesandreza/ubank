@@ -16,7 +16,7 @@ This is a web-based application for managing personal finances. The system allow
 - Budget management: the user could set a budget for each category and receive alerts when they exceed the limit.
 - Multiple accounts: the user could manage multiple bank accounts and credit cards, and reconcile their transactions with their bank statements.
 
-## Tecnologias utilizadas
+## Technologies
 
 - C#: a modern and powerful programming language used for the backend.
 - ASP.NET Core MVC: a flexible and efficient framework used for web application development.
