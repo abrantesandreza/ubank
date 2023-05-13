@@ -16,6 +16,15 @@ This is a web-based application for managing personal finances. The system allow
 - Budget management: the user could set a budget for each category and receive alerts when they exceed the limit.
 - Multiple accounts: the user could manage multiple bank accounts and credit cards, and reconcile their transactions with their bank statements.
 
+## Tecnologias utilizadas
+
+- C#: a modern and powerful programming language used for the backend.
+- ASP.NET Core MVC: a flexible and efficient framework used for web application development.
+- Entity Framework: an Object-Relational Mapping (ORM) tool used to manage database interactions.
+- SQL Server: a robust and reliable relational database management system.
+- Bootstrap: a popular CSS framework used for responsive and modern web design.
+- JQuery: a fast and lightweight JavaScript library used for client-side scripting and DOM manipulation.
+
 ## Getting Started
 
 To run the application, you will need Visual Studio 2019 or later or Visual Studio Code, .NET Core 6.0 or later, and SQL Server Express LocalDB or later. Clone the repository, open the solution in Visual Studio or Visual Studio Code, and run the project.
