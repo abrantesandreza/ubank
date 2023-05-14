@@ -1,4 +1,4 @@
-## ubank - Personal Finance Management System
+## uBank - Personal Finance Management System
 
 ## Overview
 
