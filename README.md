@@ -6,7 +6,7 @@ This is a web-based application for managing personal finances. The system allow
 
 ## Features
 
-- Categories: the user can add, list, edit and delete categories, grouping transactions by purpose or nature, such as "Food", "Transportation", "Health", "Leisure", "Salary", "Investments", among others.
+- Categories: the user can add, list, edit and delete categories, grouping transactions by purpose or nature, such as "Food", "Transportation", "Health", "Leisure", "Investments", among others.
 
 ## Future Implementations
 
