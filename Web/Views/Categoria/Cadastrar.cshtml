@@ -1,0 +1,16 @@
+@model Categoria
+
+<h1>Pagina do Cadastrar</h1>
+
+<form id="formCadastrarCategoria" onsubmit="aluno.Cadastrar()">
+    <label asp-for="Nome"></label>
+    <input type="text" asp-for="Nome" placeholder="Qual o nome da categoria?">
+
+    <label asp-for="Descricao"></label>
+    <input type="text" asp-for="Descricao" placeholder="Faça uma breve descrição desta categoria">
+
+    <label asp-for="Grupo"></label>
+    <input type="text" asp-for="Grupo" placeholder="Qual o objetivo desta categoria?">
+
+    <button type="submit" class="btn btn-success">Cadastrar</button>
+</form>

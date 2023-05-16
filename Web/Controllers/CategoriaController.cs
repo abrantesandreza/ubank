@@ -2,9 +2,11 @@ namespace Web.Controllers
 {
     public class CategoriaController : Controller
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
+        public IActionResult Index() => View();
+
+        [HttpGet("cadastrar")]
+        public IActionResult MostrarViewCadastrar() => View("Cadastrar");
+
+
     }
 }

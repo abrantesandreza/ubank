@@ -4,7 +4,7 @@ namespace Data
     {
         public ApplicationDbContext(AppSettings appSettings) : base(appSettings, "Application")
         {
-
+            
         }
 
         public DbSet<Categoria> Categorias { get; set; }
