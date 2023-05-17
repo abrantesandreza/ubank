@@ -6,16 +6,16 @@
             <h4 class="text-white-50">Criar categoria</h4>
         </div>
         <div class="form-group">
-            <label class="col-form-label mt-4" for="inputDefault">Nome</label>
-            <input type="text" class="form-control" placeholder="Qual o nome da sua nova categoria?" id="inputDefault">
+            <label class="col-form-label mt-4" asp-for="Nome">Nome</label>
+            <input type="text" asp-for="Nome" class="form-control" placeholder="Qual o nome da sua nova categoria?">
         </div>
         <div class="form-group">
-            <label for="descricao" class="form-label mt-4">Descricao</label>
-            <textarea class="form-control" placeholder="Agora faça uma boa descrição..." id="descricao" rows="3" style="height: 17px;"></textarea>
+            <label asp-for="Descricao" class="form-label mt-4">Descricao</label>
+            <textarea class="form-control" asp-for="Descricao" placeholder="Agora faça uma boa descrição..." rows="3" style="height: 17px;"></textarea>
         </div>
         <div class="form-group">
-            <label class="col-form-label mt-4" for="inputDefault">Grupo</label>
-            <input type="text" class="form-control" placeholder="Qual o objetivo desta categoria? Exemplo: Reserva de Emergência, Lazer, Saúde..." id="inputDefault">
+            <label asp-for="Grupo" class="col-form-label mt-4">Grupo</label>
+            <input type="text" asp-for="Grupo" class="form-control" placeholder="Qual o objetivo desta categoria? Exemplo: Reserva de Emergência, Lazer, Saúde...">
         </div>
         <div class="mt-4">
             <button type="submit" class="btn btn-success" style="width:150px">Criar</button>
@@ -25,3 +25,12 @@
         </div>
     </fieldset>
 </form>
+
+<script src="~/js/Pages/categoria.js" asp-append-version="true"></script>
+<script>
+    categoria.init({
+        urls: {
+            cadastrar: '@Url.Action("Cadastrar", "Categoria")'
+        }
+    });
+</script>
