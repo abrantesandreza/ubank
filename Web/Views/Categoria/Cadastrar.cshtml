@@ -1,16 +1,30 @@
 @model Categoria
 
-<h1>Pagina do Cadastrar</h1>
-
 <form id="formCadastrarCategoria" onsubmit="aluno.Cadastrar()">
-    <label asp-for="Nome"></label>
-    <input type="text" asp-for="Nome" placeholder="Qual o nome da categoria?">
-
-    <label asp-for="Descricao"></label>
-    <input type="text" asp-for="Descricao" placeholder="Faça uma breve descrição desta categoria">
-
-    <label asp-for="Grupo"></label>
-    <input type="text" asp-for="Grupo" placeholder="Qual o objetivo desta categoria?">
-
-    <button type="submit" class="btn btn-success">Cadastrar</button>
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h4 class="text-white-50">Criar categoria</h4>
+            <hr />
+        </div>
+        @*<div asp-validation-summary="All"></div>*@        
+        <div class="mb-3">
+            <label asp-for="Nome"></label>
+            <input asp-for="Nome"  class="form-control" placeholder="Qual o nome desta categoria?"/>
+            <span asp-validation-for="Nome" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Descricao"></label>
+            <input asp-for="Descricao" class="form-control" placeholder="Faça uma breve descrição..."/>
+            <span asp-validation-for="Descricao" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Grupo"></label>
+            <input asp-for="Grupo" class="form-control" placeholder="Qual o objetivo desta categoria? Exemplo: Reserva de Emergência, Lazer, Saúde..."/>
+            <span asp-validation-for="Grupo" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-success" style="width:150px">Criar</button>
+        <a asp-controller="Categoria" asp-action="Index" class="btn btn-secondary" style="width:150px">
+            Voltar para lista
+        </a>
+    </div>
 </form>
