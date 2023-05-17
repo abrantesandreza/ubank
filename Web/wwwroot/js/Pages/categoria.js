@@ -13,7 +13,7 @@ var categoria = (function() {
     var Cadastrar = function() {
         var model = $('#formCadastrarCategoria').serializeObject();
         $.post(configs.urls.cadastrar, model).done(() => {
-            site.toast.success('Categoria cadastrada com sucesso')
+            site.toast.success('Categoria cadastrada com sucesso');
         }).fail((msg) => {
             site.toast.error(msg);
         });
