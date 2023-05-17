@@ -5,5 +5,6 @@ namespace Core.Interfaces.Repositories
     public interface ICategoriaRepository
     {
         Task CadastrarAsync(Categoria categoria);
+        Task<IEnumerable<Categoria>> BuscarAsync();
     }
 }

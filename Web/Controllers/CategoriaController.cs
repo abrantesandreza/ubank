@@ -22,5 +22,8 @@ namespace Web.Controllers
             await _categoriaRepository.CadastrarAsync(categoria);
             return Ok();
         }
+
+        [HttpGet]
+        public async Task <IActionResult> BuscarCategoria() => View("Index", await _categoriaRepository.BuscarAsync());
     }
 }

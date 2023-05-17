@@ -1,4 +1,4 @@
-@* IEnumerable de Categoria *@
+@model IEnumerable<Categoria>
 
 <div class="contanier p-3">
     <div class="row pt-4">
@@ -11,3 +11,42 @@
     </div>
     <br /><br />
 </div>
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr class="table-light">
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Grupo</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null)
+        {
+            @foreach (var categoria in Model)
+            {
+                <tr>
+                    <td>@categoria.Nome</td>
+                    <td>@categoria.Descricao</td>
+                    <td>@categoria.Grupo</td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="4">Não há dados para exibir.</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script src="~/js/Pages/categoria.js" asp-append-version="true"></script>
+<script>
+    metafinanceira.init({
+        urls: {
+            index: '@Url.Action("Index", "Categoria")',
+        }
+    });
+</script>

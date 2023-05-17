@@ -13,5 +13,10 @@ namespace Data.Repositories
             await _dbContext.Categorias.AddAsync(categoria);
             await _dbContext.SaveChangesAsync();
         }
+
+        public async Task<IEnumerable<Categoria>> BuscarAsync() 
+        {
+            return await _dbContext.Categorias.ToListAsync();
+        }
     }
 }
