@@ -2,7 +2,8 @@ var aluno = (function() {
     var configs = {
         urls: {
             index: '',
-            mostrarViewCadastrar: ''
+            mostrarViewCadastrar: '',
+            cadastrar: ''
         }
     }
 
@@ -19,8 +20,18 @@ var aluno = (function() {
         });
     };
 
+    var Cadastrar = function() {
+        var model = $('#formCadastrarCategoria').serializeObject();
+        $.post(configs.urls.cadastrar, model).done(() => {
+            site.toast.success('aluno cadastrado com sucesso')
+        }).fail((msg) => {
+            site.toast.error(msg);
+        });
+    };
+
     return {
         init: init,
-        MostrarViewCadastrar: MostrarViewCadastrar
+        MostrarViewCadastrar: MostrarViewCadastrar,
+        Cadastrar: Cadastrar
     }
 })();

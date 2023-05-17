@@ -1,3 +1,6 @@
+using Core.Interfaces.Repositories;
+using Data.Repositories;
+
 namespace Web.Configurations;
 public static class DependencyInjection
 {
@@ -8,5 +11,7 @@ public static class DependencyInjection
         services.AddControllersWithViews();
 
         services.AddScoped<ApplicationDbContext>();
+
+        services.AddScoped<ICategoriaRepository, CategoriaRepository>();
     }
 }
