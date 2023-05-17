@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a web-based application for managing personal finances. The system allows the user to create, read, update and delete transactions and categories, enabling them to keep track of their expenses and incomes. The application was developed using C#, ASP.NET Core MVC and SQL Server.
+This is a web-based application for managing personal finances. The system allows the user to create, read, update and delete categories, enabling them to keep track of their goals. The application was developed using C#, ASP.NET Core MVC and SQL Server.
 
 ## Features
 
