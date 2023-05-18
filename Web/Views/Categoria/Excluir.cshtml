@@ -1,8 +1,27 @@
 @model Categoria
 
-<p>Deseja realmente excluir a categoria @Model.Nome ?</p>
-
-<button type="button" class="btn btn-danger" onclick="categoria.Excluir(@Model.Id)">Excluir</button>
+<div class="border-bottom border-1 border-secondary mt-5">
+    <h4 class="text-white-50">Deseja excluir a categoria?</h4>
+</div>
+@*<div asp-validation-summary="All"></div>*@        
+<div class="mb-0">
+    <label class="col-form-label mt-4" asp-for="Nome"></label>
+    <input asp-for="Nome" disabled class="form-control" />
+</div>
+<div class="mt-0">
+    <label class="col-form-label mt-4" asp-for="Descricao"></label>
+    <input asp-for="Descricao" disabled class="form-control" />
+</div>
+<div class="mt-0">
+    <label class="col-form-label mt-4" asp-for="Grupo"></label>
+    <input asp-for="Grupo" disabled class="form-control" />
+</div>
+<div class="mt-4">
+    <button type="button" class="btn btn-danger" style="width:150px" onclick="categoria.Excluir(@Model.Id)">Excluir</button>
+    <a asp-controller="Categoria" asp-action="Index" class="btn btn-secondary" style="width:150px">
+        Voltar para lista
+    </a>
+</div>
 
 <script src="~/js/Pages/categoria.js" asp-append-version="true"></script>
 <script>
