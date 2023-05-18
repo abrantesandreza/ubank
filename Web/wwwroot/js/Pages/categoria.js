@@ -14,6 +14,7 @@ var categoria = (function() {
         var model = $('#formCadastrarCategoria').serializeObject();
         $.post(configs.urls.cadastrar, model).done(() => {
             site.toast.success('Categoria cadastrada com sucesso');
+            location.href = configs.urls.index;
         }).fail((msg) => {
             site.toast.error(msg);
         });

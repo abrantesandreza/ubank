@@ -46,3 +46,12 @@
         }
     </tbody>
 </table>
+
+<script src="~/js/Pages/categoria.js" asp-append-version="true"></script>
+<script>
+    categoria.init({
+        urls: {
+            index: '@Url.Action("Index", "Categoria")'
+        }
+    });
+</script>
