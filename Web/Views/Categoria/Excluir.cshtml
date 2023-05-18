@@ -1,0 +1,15 @@
+@model Categoria
+
+<p>Deseja realmente excluir a categoria @Model.Nome ?</p>
+
+<button type="button" class="btn btn-danger" onclick="categoria.Excluir(@Model.Id)">Excluir</button>
+
+<script src="~/js/Pages/categoria.js" asp-append-version="true"></script>
+<script>
+    categoria.init({
+        urls: {
+            index: '@Url.Action("Index", "Categoria")',
+            excluir: '@Url.Action("Excluir", "Categoria")'
+        }
+    });
+</script>

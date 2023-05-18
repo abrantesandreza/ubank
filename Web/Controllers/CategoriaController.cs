@@ -25,5 +25,21 @@ namespace Web.Controllers
 
         [HttpGet]
         public async Task <IActionResult> BuscarCategoria() => View("Index", await _categoriaRepository.BuscarAsync());
+
+        [HttpGet("excluir")]
+        public async Task<IActionResult> MostrarViewExcluir(int id)
+        {
+            if(id == default)
+                return BadRequest("Categoria não encontrada");
+            
+            return View("Excluir", await _categoriaRepository.BuscarCategoriaPorIdAsync(id));
+        }
+
+        [HttpPost("excluir")]
+        public async Task<IActionResult> Excluir(int id)
+        {
+            await _categoriaRepository.ExcluirAsync(id);
+            return Ok();
+        }
     }
 }
