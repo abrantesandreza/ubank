@@ -4,9 +4,23 @@
 
 This is a web-based application for managing personal finances. The system allows the user to create, read, update and delete categories, enabling them to keep track of their goals. The application was developed using C#, ASP.NET Core MVC, SQL Server with Entity Framework.
 
+![1](https://github.com/abrantesandreza/ubank/assets/87620471/086c7bf7-c4ba-472d-8d5d-24f1e4af1d02)
+
 ## Features
 
 - Categories: the user can add, list, edit and delete categories, grouping transactions by purpose or nature, such as "Food", "Transportation", "Health", "Leisure", "Salary", "Investments", among others.
+
+![2](https://github.com/abrantesandreza/ubank/assets/87620471/a3489880-6e6b-43fe-a80a-fdf710836693)
+
+![3](https://github.com/abrantesandreza/ubank/assets/87620471/2cdcbbb1-5438-499e-806e-346b923bb853)
+
+![4](https://github.com/abrantesandreza/ubank/assets/87620471/e76747e8-0c74-43a1-8549-f4126e6aca5c)
+
+![5](https://github.com/abrantesandreza/ubank/assets/87620471/1e668f58-6fc0-4e47-81e4-a6e03b957a0c)
+
+![6](https://github.com/abrantesandreza/ubank/assets/87620471/b4c9e738-9279-4690-b694-2baf0fca3d72)
+
+![7](https://github.com/abrantesandreza/ubank/assets/87620471/f3b3141a-662f-4b5a-ab92-5c2fe5bdc33c)
 
 ## Future Implementations
 
