@@ -30,5 +30,18 @@ namespace Data.Repositories
             _dbContext.Categorias.Remove(categoria);
             await _dbContext.SaveChangesAsync();
         }
+
+        public async Task EditarCategoriaAsync(Categoria categoria)
+        {
+            Console.WriteLine(categoria.Id);
+            var categoriaModificada = new {
+                Nome = categoria.Nome,
+                Descricao = categoria.Descricao,
+                Grupo = categoria.Grupo
+            };
+
+            await _dbContext.UpdateEntryAsync<Categoria>(categoria.Id, categoriaModificada);
+            await _dbContext.SaveChangesAsync();
+        }
     }
 }

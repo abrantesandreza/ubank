@@ -3,8 +3,8 @@ var categoria = (function() {
         urls: {
             index: '',
             cadastrar: '',
-            mostrarViewExcluir: '',
-            excluir: ''
+            excluir: '',
+            editar: ''
         }
     }
 
@@ -32,9 +32,20 @@ var categoria = (function() {
         });
     }
 
+    var Editar = function() {
+        var model = $('#formEditarCategoria').serializeObject();
+        $.post(configs.urls.editar, model).done(() => {
+            site.toast.success('Categoria editada com sucesso!');
+            location.href = configs.urls.index;
+        }).fail((msg) => {
+            site.toast.error(msg);
+        });
+    }
+
     return {
         init: init,
         Cadastrar: Cadastrar,
-        Excluir: Excluir
+        Excluir: Excluir,
+        Editar: Editar
     }
 })();

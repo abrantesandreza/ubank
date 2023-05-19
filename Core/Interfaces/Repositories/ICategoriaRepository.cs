@@ -8,5 +8,6 @@ namespace Core.Interfaces.Repositories
         Task<IEnumerable<Categoria>> BuscarAsync();
         Task<Categoria> BuscarCategoriaPorIdAsync(int id);
         Task ExcluirAsync(int id);
+        Task EditarCategoriaAsync(Categoria categoria);
     }
 }

@@ -41,5 +41,21 @@ namespace Web.Controllers
             await _categoriaRepository.ExcluirAsync(id);
             return Ok();
         }
+
+        [HttpGet("editar")]
+        public async Task<IActionResult> MostrarViewEditar(int id)
+        {
+            if(id == default)
+                return BadRequest("Categoria não encontrada");
+            
+            return View("Editar",await _categoriaRepository.BuscarCategoriaPorIdAsync(id));
+        }
+
+        [HttpPost("editar")]
+        public async Task<IActionResult> Editar(Categoria categoria)
+        {
+            await _categoriaRepository.EditarCategoriaAsync(categoria);
+            return Ok();
+        }
     }
 }
