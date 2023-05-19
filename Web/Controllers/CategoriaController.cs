@@ -48,7 +48,7 @@ namespace Web.Controllers
             if(id == default)
                 return BadRequest("Categoria não encontrada");
             
-            return View("Editar",await _categoriaRepository.BuscarCategoriaPorIdAsync(id));
+            return View("Editar", await _categoriaRepository.BuscarCategoriaPorIdAsync(id));
         }
 
         [HttpPost("editar")]
@@ -56,6 +56,15 @@ namespace Web.Controllers
         {
             await _categoriaRepository.EditarCategoriaAsync(categoria);
             return Ok();
+        }
+
+        [HttpGet("detalhes")]
+        public async Task<IActionResult> MostrarViewDetalhes(int id) 
+        {
+            if(id == default)
+                return BadRequest("Categoria não encontrada");
+
+            return View("Detalhes", await _categoriaRepository.BuscarCategoriaPorIdAsync(id)); 
         }
     }
 }
