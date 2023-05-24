@@ -45,4 +45,4 @@ To run the application, you will need Visual Studio 2019 or later or Visual Stud
 
 ## Contributing
 
-Contributions are welcome! If you find a bug or want to suggest a new feature, please open an issue or submit a pull request.
+Contributions are more than welcome! If you find a bug or want to suggest a new feature, please open an issue or submit a pull request.
